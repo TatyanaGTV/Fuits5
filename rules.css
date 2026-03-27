@@ -1,0 +1,43 @@
+body {
+    background-color: #fef6f0;
+}
+
+.container{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.rules-item{
+    width: 718px;
+    border-radius: 5px;
+    border: 2px solid #7dd3fc;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.rules-title{
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;   
+    color: rgb(4, 4, 46);
+    margin-bottom: 20px;
+}
+.rules-subtitle{
+    font-size: 18px;
+    line-height: 2;
+    font-family: 'Times New Roman', Times, serif;   
+    color: rgb(4, 4, 46);
+}
+
+.image img {
+    width: 883px;
+    border-radius: 10px;
+}
+
+.image {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css">
+    <title>Фрукто5</title>
+</head>
+<body>
+   <div class="dropdown">
+    <button class="dropdown-btn" onclick="toggleMenu()">
+        Меню ▼
+    </button>
+
+    <div id="dropdownContent" class="dropdown-content">
+        <a href="rules.html">Правила игры</a>
+        <a href="title.html">Выход</a>
+    </div>
+
+    </div>
+
+    
+
+<div class= "game-box">
+    <div class="hintbox">
+        <div class="hover">
+            <button class="hover-btn" id="tip" onclick="openHints()">
+                <img src="free-icon-clue-8064985.png" alt="">
+            </button>
+        </div>
+        <div class="tips" id="hints">
+            <p>Правила</p>
+            <p>По цвету</p>
+            <p>По фрукту</p>
+            <p>По цвету и фрукту</p>
+        </div>
+    </div>
+<div class="player_box"> 
+    <div class="playerScore">
+        <h3>Игрок 1</h3>
+<span id="score">Количество очков 0</span>
+    </div>
+
+ <input type="text" placeholder="Игрок 1" class="input" id="pl_1"></input>
+<div id="player1" class="player-zone"></div>
+ <button id='btn_1' class="button" >Взять карту</button>
+</div>
+
+
+<div id="centerArea">
+    <img id="flyingCard" />
+</div>
+
+<div class="player_box"> 
+    <div class="playerScore">
+        <h3>Игрок 2</h3>
+<span id="score2">Количество очков 0</span>
+    </div>
+
+ <input type="text" placeholder="Игрок 2" class="input" id="pl_1"></input>
+<div id="player2" class="player-zone"></div>
+<button id="btn_2" class="button">Взять карту</button>
+</div>
+</div>
+<div id="gameOverScreen" class="hidden">
+    <div class="game-over-content">
+        <h1>🎉 Колода закончилась</h1>
+        <button>
+            <a class="mainlink" href="title.html">Выход</a></button>
+    </div>
+</div>
+
+
+
+<script src="game.js"></script>
+</body>
+</html>

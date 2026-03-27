@@ -1,0 +1,295 @@
+body {
+    background: #fef6f0;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    position: relative;
+}
+#centerArea {
+    position: relative;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#flyingCard {
+    width: 350px;
+    position: absolute;
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+/* зоны игроков */
+.player-zone {
+    min-height: 350px;
+    width: 350px;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+/* цвета игроков */
+#player1 {
+    background: #e0f7ff;
+    border: 3px solid #7dd3fc;
+}
+
+#player2 {
+    background: #ffe4f1;
+    border: 3px solid #ff7aa2;
+}
+
+/* активный игрок */
+.active-player {
+    box-shadow: 0 0 25px rgba(255, 200, 0, 0.6);
+    transform: scale(1.05);
+    animation: pulse 1s infinite alternate;
+}
+
+/* пульсация */
+@keyframes pulse {
+    from { transform: scale(1.05); }
+    to { transform: scale(1.08); }
+}
+
+/* надпись хода */
+#turn {
+    font-size: 24px;
+    margin: 15px;
+    color: #ff8c42;
+}
+
+.game-box{
+display: flex;
+display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+
+}
+.player_box{
+
+}
+
+.button{
+    width: 200px;
+    height: 100px;
+    background: #fafa66;
+    font-size: 25px;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button:hover{
+    background: red;
+    color: white;
+    box-shadow: 4px 5px 8px 2px #b31515;
+}
+
+/* попап при окончании игры*/
+.hidden {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gameOverScreen {
+    display: none;
+     z-index: 1;
+}
+
+.game-over-content {
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    animation: softPop 0.5s ease;
+   
+}
+
+.game-over-content h1 {
+    font-size: 28px;
+    color: #ff7aa2;
+    margin-bottom: 25px;
+}
+
+.game-over-content button {
+    background: #7dd3fc;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.game-over-content button:hover {
+    background: #38bdf8;
+}
+
+@keyframes softPop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/*инпуты для ввода имен игроков*/
+input{
+    height: 35px;
+    border: 2px solid yellowgreen;
+    border-radius: 20px;
+    font-size: 20px;
+    padding-left: 15px;
+
+}
+input:focus {
+   border: 2px solid rgb(0, 89, 255);
+   outline: none;
+}
+.mainlink{
+    text-decoration: none;
+    color: black;
+}
+/*выпадающее меню*/
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 20px;
+    left: 50px;
+}
+
+.dropdown-btn {
+    background: yellow;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: rgb(26, 109, 48);
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: white;
+    min-width: 150px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.dropdown-content a,li {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #444;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.dropdown-content a,li:hover {
+    background: #f5f5f5;
+}
+
+.button.title{
+    width: 300px;
+    height: 100px;
+    background:yellow;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    
+    box-shadow: #4ebd55 0px 0px 10px 4px;
+}
+
+.button.title a {
+    text-decoration: none;
+    color:black;
+    font-size: 35px;
+
+}
+
+.bodyTitle {
+    width: 100%;
+    height: auto;
+    background-image: url(images/title3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.playerScore{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.tips{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #35e11b;
+    font-weight: bold;
+    
+}
+#hints{
+    display: none;
+}
+#tip{
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid green;
+    background-color: #1ab902;
+    cursor: pointer;
+}
+
+.hover::after{
+    content: "Подсказка";           
+    left: 235px;
+    transform: translateX(-50%) translateY(10px);
+    background: #1ab902;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.hover:hover::after {
+opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+.hover-text {
+    display: none;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.hover-btn:hover .hover-text {
+    display: inline;
+}
+.hover-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.hintbox{
+    width: 200px;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+    
