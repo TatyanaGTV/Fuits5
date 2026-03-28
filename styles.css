@@ -292,4 +292,34 @@ opacity: 1;
     justify-content: center;
     align-items: center;
 }
+footer {
+    margin-top: 30px;
+    padding: 0 60px 0 60px;
+}
+footer p {
+    text-align: center;
+    font-size: 20px;
+}
+footer p a {
+    text-decoration: none;
+    color: white;
+}
+footer p a:hover {
+    text-decoration: underline;
+    color:#451dd8
+}
+.main-screen p{
+    display: inline;
+}
+
+.rights{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.lisence{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
     

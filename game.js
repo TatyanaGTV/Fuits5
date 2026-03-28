@@ -1,7 +1,7 @@
 let mainDeck = [];
 let player1Deck = [];
 let player2Deck = [];
-
+// сделать адаптивные стили
 window.onload = function() {
     startGame();
 }
@@ -178,3 +178,5 @@ function openHints () {
     }
 
 }
+
+let footer = document.getElementById('footer')
